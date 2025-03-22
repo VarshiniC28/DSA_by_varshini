@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1. Reverse Strings word by word</p>
+    <p>2. FizzBuzz</p>
+
+    <!-- <script>
+        let solve = function (A) {
+            let Reverse = A.trim().split(/\s+/);
+            return Reverse.reverse().join(" ");
+        }
+        let A = prompt("Enter the sentence yoy want to reverse: ")
+        console.log(solve(A));
+
+    </script> -->
+
+    <script>
+        let A = +prompt("Enter the length of array till u want to check the conditions: ");
+        const fizzbuzz = function (A) {
+            return Array.from({ length: A }, (curEle, i) =>
+                (i + 1) % 15 === 0 ? "FizzBuzz" :
+                    (i + 1) % 3 === 0 ? "Fizz" :
+                        (i + 1) % 5 === 0 ? "Buzz" :
+                            (i + 1).toString()
+            );
+        }
+
+        console.log(fizzbuzz(A));
+
+    </script>
+</body>
+
+</html>
