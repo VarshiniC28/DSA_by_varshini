@@ -7,15 +7,27 @@ public class BinarySearchForInfiniteArray {
 	static int ans(int[] arr, int target) {
 		//first find the range
 		//first start with a box of 2
+		Arrays.sort(arr);
 		int start=0;
 		int end=1;
 		
 		//condition for the target to lie in range
+		while(target>arr[end]) {
+			int newStart = end+1; //this is the new start
+			
+			//double the box value
+			//end = prevEnd + 2*size of prev array chunk
+			//previous array chunks size = end-start+1
+			
+			end = end + 2*(end-start+1);
+			start = newStart;
+		}
+		
+		return binarySearch(arr, target, start, end);
 		
 	}
 	
 	static int binarySearch(int[] arr, int target, int start, int end) {
-//		Arrays.sort(arr);
 		
 		while(start<=end) {
 			//find the middle element
@@ -40,8 +52,8 @@ public class BinarySearchForInfiniteArray {
 		//start from small chunk of array and keep moving to next chunk while doubling the size
 		//start from start =0; end=1;
 		
-//		int [] arr = {-18,-12,-4,0,2,4,3,15,16,18,45,22,89}; 
-//		System.out.println(binarySearch(arr,22 ));
+		int [] arr = {-18,-12,-4,0,2,4,15,16,18,45,89,90,99,100,101,200,400,700,900}; 
+		System.out.println(ans(arr,15));
 	}
 
 }
