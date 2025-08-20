@@ -7,6 +7,10 @@ public class BinarySearchForInfiniteArray {
 	static int ans(int[] arr, int target) {
 		//first find the range
 		//first start with a box of 2
+		int start=0;
+		int end=1;
+		
+		//condition for the target to lie in range
 		
 	}
 	
