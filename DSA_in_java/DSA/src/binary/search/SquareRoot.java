@@ -13,7 +13,7 @@ public class SquareRoot {
 			int mid = s+(e-s)/2;
 			long square= (long) mid*mid;
 			
-			if(square==mid) {
+			if(square==x) {
 				return mid;
 			}else if(square<x) {
 				ans=mid; //storing mid that can be floor if exact sqrt not found
@@ -27,7 +27,7 @@ public class SquareRoot {
 
 	public static void main(String[] args) {
 
-		System.out.println(sqrt(25));
+		System.out.println(sqrt(36));
 	}
 
 }
