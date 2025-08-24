@@ -2,7 +2,7 @@ package binarysearchin2D.array;
 
 import java.util.Arrays;
 
-public class BSin2D {
+public class BSin2DSortedRowAndColumnWise {
 	
 	//matrix arrays sorted in column wise and row wise as i psvm - then binary search
 	
