@@ -6,5 +6,6 @@ public class StringsInJava {
 		
 		String a = "Varsha";
 		String b = "Varsha";
+		
 	}
 }
