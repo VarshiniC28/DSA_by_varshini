@@ -1,5 +1,7 @@
 package pattern.programming;
 
+import java.util.Iterator;
+
 public class PatternProgramming {
 
 	public static void main(String[] args) {
@@ -95,6 +97,30 @@ public class PatternProgramming {
 		}		
 		System.out.println();
 	}
+	
+	
+	//---------------------------------------------------
+	
+	int f = 5;
+	for (int i = 1; i <= f; i++) {
+		
+		for (int k = 0; k < f-i; k++) {
+			System.out.print("  ");
+		}
+		
+		for (int j = i; j >= 1 ; j--) {
+			System.out.print(j + " ");
+		}
+		for (int j = 2; j <= i ; j++) {
+			System.out.print(j + " ");
+		}
+		
+		System.out.println();
+	}
+	
+	//-----------------------------------------------------
+	
+	
 }
 
 }
