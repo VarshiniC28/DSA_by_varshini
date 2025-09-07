@@ -31,11 +31,5 @@ public class RecursionIntro2 {
 		//print 1 to 5 but call only one function
 		print1(1);
 		
-		
-		//Recursion:
-		/*
-		 * => Function calls another function
-		 * => 
-		 * */
 	}
 }
