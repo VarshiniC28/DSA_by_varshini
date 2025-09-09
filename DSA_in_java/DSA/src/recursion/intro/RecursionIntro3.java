@@ -35,5 +35,12 @@ public class RecursionIntro3 {
 		 * => Helps breaking down bigger problems to smaller problems
 		 * 
 		 * */
+		
+		//Types of Recurrence relations :
+		//1. Linear Recurrence relations : Eg. Fiboncci
+		//2. Divide & Conquer Recurrence relations ( relieved by c factor)
+		
+		
+		
 	}
 } 
