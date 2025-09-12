@@ -8,7 +8,8 @@ public class FibonacciNumber2 {
 			return n;
 		}
 		
-		return (int)((Math.pow((1+Math.sqrt(5))/2, n) - Math.pow((1-Math.sqrt(5))/2, n))/Math.sqrt(5)); 
+//		return (int)((Math.pow((1+Math.sqrt(5))/2, n) - Math.pow((1-Math.sqrt(5))/2, n))/Math.sqrt(5)); // This is fibonacci formaula
+		return (int)(Math.pow((1+Math.sqrt(5))/2, n)/Math.sqrt(5));  //this is time complexity for fibonacci but also gives answer, ignoring the -ve part since it is less dominating part
 	}
 
 	public static void main(String[] args) {
