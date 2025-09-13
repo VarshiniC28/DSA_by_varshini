@@ -1,0 +1,885 @@
+JAVA NOTES:
+
+==============================
+🌟 JAVA NOTES – DAY 1 (Basics)
+==============================
+
+📌 What is Java?
+-------------------
+- Java is a high-level, object-oriented programming language.
+- Created by James Gosling at Sun Microsystems (Now owned by Oracle).
+- Key Features:
+  ✔ Platform Independent (Write Once, Run Anywhere - WORA)
+  ✔ Simple and Secure
+  ✔ Robust and Object-Oriented
+  ✔ Huge Library Support and Community
+
+📌 JVM vs JDK vs JRE
+-----------------------
+1. JDK (Java Development Kit)
+   - Contains tools to develop Java apps.
+   - Includes: Compiler + Debugger + JRE
+
+2. JRE (Java Runtime Environment)
+   - Needed to run Java applications.
+   - Includes: JVM + Libraries
+
+3. JVM (Java Virtual Machine)
+   - Executes the bytecode (.class files) and makes Java portable
+
+📌 How Java Works?
+---------------------
+1. You write code in a `.java` file
+2. `javac` (Java Compiler) converts it to `.class` (Bytecode)
+3. JVM runs the bytecode
+
+📌 Structure of a Java Program
+-------------------------------
+Example:
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Varshini!");
+    }
+}
+
+Explanation:
+- `public class HelloWorld` : Class declaration
+- `main(String[] args)`     : Starting point of the program
+- `System.out.println()`    : Prints output to the console
+
+📌 Output:
+------------
+Hello, Varshini!
+
+📌 Tools Used:
+---------------
+- IDE: Eclipse
+- Project Name: JavaBasics
+- Class Name: HelloWorld
+
+==============================
+End of Day 1 Notes – Basics
+==============================
+
+📘 Java Basics - Part 2: Variables, Data Types, and Input/Output
+
+🔹 1. What is a Variable?
+- A variable is a container to store data.
+Example:
+    int age = 22;
+
+🔹 2. Data Types in Java
+
+➡️ Primitive Data Types (8 total):
+- byte      (1 byte)    → byte b = 10;
+- short     (2 bytes)   → short s = 1000;
+- int       (4 bytes)   → int num = 1234;
+- long      (8 bytes)   → long l = 999999L;
+- float     (4 bytes)   → float f = 5.5f;
+- double    (8 bytes)   → double d = 99.99;
+- char      (2 bytes)   → char c = 'A';
+- boolean   (1 bit)     → boolean isJavaFun = true;
+
+➡️ Non-Primitive Data Types:
+- Example: String name = "Varshini";
+
+🔹 3. Printing Output
+- System.out.println("Text");   → prints with newline
+- System.out.print("Text");     → prints without newline
+
+🔹 4. Taking Input from User
+- Use Scanner class from java.util package
+
+✏️ Example:
+import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        System.out.println("Hello " + name + ", you are " + age + " years old.");
+    }
+}
+
+💡 Notes:
+- sc.nextLine() → reads a full line of text
+- sc.nextInt() → reads an integer
+- Always close Scanner using sc.close(); (optional for now)
+==========================================================================================================================================
+========================
+   Java Operators 📘
+========================
+
+1. Arithmetic Operators:
+------------------------
++   => Addition
+-   => Subtraction
+*   => Multiplication
+/   => Division
+%   => Modulus (Remainder)
+
+Example:
+int a = 10, b = 5;
+System.out.println(a + b); // 15
+
+2. Relational (Comparison) Operators:
+-------------------------------------
+==   => Equal to
+!=   => Not equal to
+>    => Greater than
+<    => Less than
+>=   => Greater than or equal to
+<=   => Less than or equal to
+
+Example:
+System.out.println(a > b); // true
+
+3. Logical Operators:
+---------------------
+&&   => Logical AND (both conditions true)
+||   => Logical OR  (at least one condition true)
+!    => Logical NOT (reverses boolean value)
+
+Example:
+System.out.println(a > 5 && b < 10); // true
+
+4. Assignment Operators:
+------------------------
+=    => Assign value
++=   => Add and assign (a += 5 → a = a + 5)
+-=   => Subtract and assign
+*=   => Multiply and assign
+/=   => Divide and assign
+
+Example:
+a += 3; // a = a + 3
+
+5. Sample Java Program:
+------------------------
+
+public class OperatorExample {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        // Arithmetic
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Modulus: " + (a % b));
+
+        // Comparison
+        System.out.println("Is a > b? " + (a > b));
+
+        // Logical
+        System.out.println("a > 5 && b < 10: " + (a > 5 && b < 10));
+
+        // Assignment
+        a += 3; // same as a = a + 3
+        System.out.println("a after += 3: " + a);
+    }
+}
+
+==========================================================================================================================================
+--------------------------
+Java: Conditional Statements
+--------------------------
+
+1. if Statement:
+   Syntax:
+   if (condition) {
+       // Code to execute if condition is true
+   }
+
+2. if-else Statement:
+   Syntax:
+   if (condition) {
+       // Code to execute if condition is true
+   } else {
+       // Code to execute if condition is false
+   }
+
+3. if-else if Statement:
+   Syntax:
+   if (condition1) {
+       // Code for condition1
+   } else if (condition2) {
+       // Code for condition2
+   } else {
+       // Code if none of the above are true
+   }
+
+4. switch Statement:
+   Syntax:
+   switch (expression) {
+       case value1:
+           // Code for value1
+           break;
+       case value2:
+           // Code for value2
+           break;
+       default:
+           // Code if no case matches
+           break;
+   }
+
+--------------------------
+Java: Loops
+--------------------------
+
+1. for Loop:
+   Syntax:
+   for (initialization; condition; update) {
+       // Code to execute
+   }
+
+2. while Loop:
+   Syntax:
+   while (condition) {
+       // Code to execute
+   }
+
+3. do-while Loop:
+   Syntax:
+   do {
+       // Code to execute
+   } while (condition);
+
+--------------------------
+Examples
+--------------------------
+
+public class Main {
+    public static void main(String[] args) {
+        // If-else
+        int age = 20;
+        if (age >= 18) {
+            System.out.println("Adult");
+        } else {
+            System.out.println("Minor");
+        }
+
+        // Switch-case
+        char grade = 'A';
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            default:
+                System.out.println("Average");
+        }
+
+        // For loop
+        for (int i = 0; i < 5; i++) {
+            System.out.println(i);
+        }
+
+        // While loop
+        int j = 0;
+        while (j < 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        // Do-while loop
+        int k = 0;
+        do {
+            System.out.println(k);
+            k++;
+        } while (k < 5);
+    }
+}
+
+==========================================================================================================================================
+
+========================================
+           ARRAYS IN JAVA
+========================================
+
+What is an Array?
+- A container that holds fixed number of values of same type.
+- Index starts at 0.
+
+Declaration and Initialization:
+- int[] numbers = new int[5]; // size 5
+- numbers[0] = 10;
+- int[] marks = {90, 80, 70, 85, 95};
+
+Accessing and Looping:
+- for (int i = 0; i < marks.length; i++) {
+      System.out.println(marks[i]);
+  }
+
+Enhanced For Loop (For-each):
+- for (int mark : marks) {
+      System.out.println(mark);
+  }
+
+========================================
+            STRINGS IN JAVA
+========================================
+
+What is a String?
+- A sequence of characters.
+- Immutable in Java.
+
+Declaration:
+- String name = "Varshini";
+- String greeting = new String("Hello");
+
+Useful Methods:
+- s.length()              → Length of string
+- s.charAt(0)             → Character at index 0
+- s.toUpperCase()         → Convert to upper case
+- s.toLowerCase()         → Convert to lower case
+- s.contains("text")      → Check if text exists
+- s.indexOf("text")       → Index of text
+- s.equals("Hello")       → Exact match
+- s.equalsIgnoreCase("hello") → Match ignoring case
+
+========================================
+        PRACTICE CODE EXAMPLE
+========================================
+
+public class Main {
+    public static void main(String[] args) {
+        // Arrays
+        int[] nums = {1, 2, 3, 4, 5};
+        for (int num : nums) {
+            System.out.println("Array value: " + num);
+        }
+
+        // Strings
+        String str = "Java is fun!";
+        System.out.println("Length: " + str.length());
+        System.out.println("Uppercase: " + str.toUpperCase());
+        System.out.println("Char at 0: " + str.charAt(0));
+    }
+}
+
+==========================================================================================================================================
+
+-------------------------------
+📘 Java - Functions (Methods)
+-------------------------------
+🔹 A function (method) is a block of code that performs a specific task.
+🔹 It improves code reusability and readability.
+
+📌 Syntax:
+returnType functionName(parameters) {
+    // code
+    return value;
+}
+
+📌 Example:
+int add(int a, int b) {
+    return a + b;
+}
+
+📌 Calling a function:
+int result = add(10, 20);
+
+🔹 Types of Functions:
+1. No return type, no parameters
+2. No return type, with parameters
+3. With return type, no parameters
+4. With return type, with parameters
+
+------------------------------------------
+📘 Java - Function Overloading
+------------------------------------------
+🔹 Same function name with different parameters.
+
+📌 Example:
+int add(int a, int b) { return a + b; }
+double add(double a, double b) { return a + b; }
+
+------------------------------------------
+📘 Java - Object-Oriented Programming (OOP)
+------------------------------------------
+🔹 Java is an object-oriented language. OOP = Real-world modeling.
+
+🔹 4 Pillars of OOP:
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+🔹 OOP uses: Classes & Objects
+
+📘 Class:
+A blueprint for objects.
+Syntax:
+class ClassName {
+    // variables (attributes)
+    // methods (behaviors)
+}
+
+📘 Object:
+An instance of a class.
+Syntax:
+ClassName obj = new ClassName();
+
+📌 Example:
+class Student {
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name + " is " + age + " years old.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.name = "Varshini";
+        s1.age = 21;
+        s1.display();
+    }
+}
+
+🔹 `this` Keyword:
+Refers to the current object.
+
+🔹 Constructor:
+A special method called when an object is created.
+- Same name as class
+- No return type
+
+📌 Example:
+Student(String n, int a) {
+    name = n;
+    age = a;
+}
+===================================================================
+
+TYPES OF FUNCTIONS IN JAVA
+--------------------------
+
+1. BUILT-IN FUNCTIONS (PREDEFINED METHODS)
+   → These are already defined in Java libraries (like java.lang, java.util).
+   → You can directly use them in your code.
+
+Examples:
+---------
+System.out.println("Hello");      // Prints the given text to console
+Math.sqrt(25);                    // Returns square root of 25 → 5.0
+Math.max(10, 20);                 // Returns maximum → 20
+Math.min(10, 20);                 // Returns minimum → 10
+Math.pow(2, 3);                   // 2 raised to the power 3 → 8.0
+Math.abs(-10);                    // Returns absolute value → 10
+
+String s = "hello";
+s.length();                       // Returns length of string → 5
+s.charAt(0);                      // Returns character at index 0 → 'h'
+s.toUpperCase();                 // Converts string to uppercase → "HELLO"
+s.toLowerCase();                 // Converts string to lowercase → "hello"
+s.substring(1, 4);               // Returns substring from index 1 to 3 → "ell"
+s.contains("el");                // Returns true if substring exists → true
+s.equals("hello");               // Compares strings for equality
+
+Scanner sc = new Scanner(System.in);  // Allows user input
+int a = sc.nextInt();                 // Reads an integer input
+String str = sc.nextLine();           // Reads full line input
+
+2. USER-DEFINED FUNCTIONS
+   → These are the methods/functions you write to perform a specific task.
+
+Structure:
+----------
+returnType functionName(parameters) {
+    // function body
+}
+
+Examples:
+---------
+public static void greet() {
+    System.out.println("Hello, Varshini!");
+}
+
+public static int add(int a, int b) {
+    return a + b;
+}
+
+Calling User-Defined Functions:
+-------------------------------
+greet();                 // Calls the greet function
+int result = add(4, 5);  // Calls add and stores the result → 9
+
+SUMMARY:
+--------
+BUILT-IN FUNCTION → Already made, we just use them (like Math.sqrt)
+USER-DEFINED      → We create them to use in our program
+
+==========================================================================================================================================
+JAVA INPUT METHODS USING SCANNER
+--------------------------------
+
+To take user input in Java, we use the Scanner class from java.util package:
+
+IMPORTING SCANNER:
+------------------
+import java.util.Scanner;
+
+CREATING SCANNER OBJECT:
+------------------------
+Scanner sc = new Scanner(System.in);
+
+COMMON METHODS OF SCANNER:
+--------------------------
+
+1. sc.next();          // Reads a single word (until space)
+2. sc.nextLine();      // Reads the whole line (including spaces)
+3. sc.nextInt();       // Reads an integer
+4. sc.nextFloat();     // Reads a float number
+5. sc.nextDouble();    // Reads a double number
+6. sc.nextBoolean();   // Reads a boolean value (true/false)
+
+EXAMPLE:
+--------
+System.out.print("Enter name: ");
+String name = sc.next();        // Input: Varshini Kumar → stores "Varshini" only
+
+System.out.print("Enter full name: ");
+String fullName = sc.nextLine(); // Input: Varshini Kumar → stores "Varshini Kumar"
+
+System.out.print("Enter age: ");
+int age = sc.nextInt();         // Input: 21 → stores 21
+
+System.out.print("Enter a float: ");
+float f = sc.nextFloat();       // Input: 5.4 → stores 5.4
+
+System.out.print("Are you a student? ");
+boolean student = sc.nextBoolean();  // Input: true → stores true
+
+HOW TO READ A CHARACTER INPUT:
+------------------------------
+Java does NOT have sc.nextChar() directly.
+So we use:
+String s = sc.next();           // Example input: A
+char ch = s.charAt(0);          // ch = 'A'
+
+To get a character from a string:
+---------------------------------
+String str = "hello";
+char first = str.charAt(0);     // 'h'
+char second = str.charAt(1);    // 'e'
+
+NOTE:
+-----
+- Use `nextLine()` after `nextInt()` or `next()` carefully,
+  because `nextInt()` leaves a newline in the buffer.
+  You may need to add an extra `sc.nextLine();` to consume it.
+
+EXTRA TIP:
+----------
+Always close the scanner at the end of the program to free resources:
+sc.close();
+
+=====================================================================
+=====================================================================
+
+📘 JAVA ACCESS SPECIFIERS - NOTES
+
+===============================
+✅ WHAT ARE ACCESS SPECIFIERS?
+===============================
+Access specifiers define the visibility/scope of classes, methods, and variables.
+
+There are 4 types:
+
+1. public      → Accessible from anywhere
+2. private     → Accessible only within the same class
+3. protected   → Accessible within same package AND subclasses
+4. default     → Accessible only within the same package (no keyword used)
+
+===============================
+✅ WHEN TO USE EACH
+===============================
+
+🔓 public:
+- Used when you want universal access.
+- Example: main() method, utility methods.
+
+🔒 private:
+- Used to hide data (Encapsulation).
+- Example: class variables that shouldn't be accessed directly.
+
+🟡 protected:
+- Used in inheritance - lets child classes access members.
+- Useful when subclass is in different package.
+
+🟠 default (no keyword):
+- Only accessible within same package.
+- Use when you want package-level access control.
+
+===============================
+✅ EXAMPLES
+===============================
+
+public class MyClass {
+    public int x = 10;       // Accessible from anywhere
+    private int y = 20;      // Accessible only inside MyClass
+    protected int z = 30;    // Accessible within package or subclass
+    int k = 40;              // default → Accessible within package
+}
+
+===============================
+✅ WHY USE THEM?
+===============================
+To protect data, control access, and follow OOP principles like Encapsulation.
+This leads to secure, clean, and manageable code.
+
+==========================================================================================================================================
+
+📘 OOP BASICS IN JAVA
+
+=========================
+✅ 4 PILLARS OF OOP
+=========================
+
+1. Encapsulation → Binding data & methods, restricting access.
+2. Abstraction → Hiding internal complexity, showing essentials.
+3. Inheritance → Acquiring features of another class.
+4. Polymorphism → One function/method, many behaviors.
+
+=========================
+✅ CLASS & OBJECT
+=========================
+
+class Student {
+    int age;
+    String name;
+
+    void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();  // Object
+        s1.name = "Ammu";
+        s1.age = 21;
+        s1.displayInfo();  // Output: Name: Ammu, Age: 21
+    }
+}
+
+=========================
+✅ ENCAPSULATION EXAMPLE
+=========================
+
+class Account {
+    private int balance;
+
+    public void setBalance(int amt) {
+        balance = amt;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+}
+
+=========================
+✅ WHY OOP IS IMPORTANT?
+=========================
+- Makes code modular & reusable
+- Increases security & maintainability
+- Reflects real-world models better
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🌳 INHERITANCE, POLYMORPHISM, INTERFACES
+
+=======================
+✅ INHERITANCE
+=======================
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+Main:
+Dog d = new Dog();
+d.sound(); // inherited
+d.bark();  // own
+
+=======================
+✅ POLYMORPHISM
+=======================
+
+🔸 Compile-Time (Overloading)
+
+class MathOps {
+    int add(int a, int b) { return a + b; }
+    int add(int a, int b, int c) { return a + b + c; }
+}
+
+🔸 Run-Time (Overriding)
+
+class Animal {
+    void sound() { System.out.println("Animal sound"); }
+}
+
+class Dog extends Animal {
+    void sound() { System.out.println("Dog barks"); }
+}
+
+Main:
+Animal a = new Dog();
+a.sound(); // Dog barks
+
+=======================
+✅ INTERFACES
+=======================
+
+interface Camera {
+    void takePhoto();
+}
+
+interface MusicPlayer {
+    void playMusic();
+}
+
+class SmartPhone implements Camera, MusicPlayer {
+    public void takePhoto() { System.out.println("Photo captured"); }
+    public void playMusic() { System.out.println("Music playing"); }
+}
+
+-----------------------------------------------------------------------------------------------------------
+🕵️‍♀️ ABSTRACTION IN JAVA
+
+Definition:
+Hiding internal details and showing only essential features.
+
+Java supports abstraction using:
+1. Abstract Classes
+2. Interfaces
+
+=======================
+✅ ABSTRACT CLASS
+=======================
+abstract class Animal {
+    abstract void sound(); // no body
+    void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+Main:
+Dog d = new Dog();
+d.sound(); // Dog barks
+d.eat();   // Animal eats food
+
+=======================
+✅ INTERFACE (Full Abstraction)
+=======================
+interface Vehicle {
+    void start(); // public abstract
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car started");
+    }
+}
+
+=======================
+✅ WHY USE ABSTRACTION?
+=======================
+- Hides unwanted details
+- Reduces complexity
+- Improves reusability
+- Promotes loose coupling
+
+=========================================================================================================================================
+
+⚠️ EXCEPTION HANDLING IN JAVA
+
+✅ What is an Exception?
+An unexpected event that disrupts normal program flow.
+
+✅ Why Handle Exceptions?
+- Prevent program crash
+- Graceful error handling
+- Maintain normal flow
+
+✅ Types of Exceptions:
+1. Checked (compile-time) → IOException, SQLException
+2. Unchecked (runtime) → ArithmeticException, NullPointerException
+
+✅ Common Exception Classes:
+- ArithmeticException → divide by 0
+- NullPointerException → null object access
+- ArrayIndexOutOfBoundsException → invalid array index
+- NumberFormatException → invalid number format
+
+✅ try-catch-finally Example:
+try {
+    int a = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+} finally {
+    System.out.println("Always runs");
+}
+
+✅ throw vs throws:
+- throw → manually throw exception
+- throws → declare exception in method
+
+void check(int age) throws ArithmeticException {
+    if(age < 18)
+        throw new ArithmeticException("Not eligible to vote");
+}
+==========================================================================================================================================
+
+📂 JAVA FILE INPUT/OUTPUT
+
+✅ Why File I/O?
+To read/write data from/to files using Java.
+
+✅ Java I/O Classes:
+- File → represents file or folder
+- FileReader → reads character file
+- BufferedReader → reads efficiently line-by-line
+- FileWriter → writes to file
+- BufferedWriter → writes efficiently
+
+📥 READING FROM FILE:
+BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
+String line;
+while((line = reader.readLine()) != null) {
+    System.out.println(line);
+}
+reader.close();
+
+📤 WRITING TO FILE:
+BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+writer.write("Hello Ammu!");
+writer.newLine();
+writer.write("Keep learning!");
+writer.close();
+
+✅ Always use try-catch to handle IOException
+==========================================================================================================================================
