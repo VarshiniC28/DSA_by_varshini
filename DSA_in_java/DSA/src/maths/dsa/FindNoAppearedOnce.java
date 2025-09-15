@@ -18,6 +18,14 @@ public class FindNoAppearedOnce {
 	        // After the loop finishes, 'unique' will contain the number that appeared only once
 	        return unique;
 	    }
+	 
+	 static int ans2(int[] arr) {
+		 int ans = 0;
+		 for(int n: arr) {
+			 ans+=n;
+		 }
+		 return ans;
+	 }
 
 	    public static void main(String[] args) {
 	        // Array where every number appears twice, except one number
@@ -26,6 +34,14 @@ public class FindNoAppearedOnce {
 	        // Call the function and print the result
 	        // Expected: 6 (because 6 has no pair, all others cancel out)
 	        System.out.println(ans(arr));
+	        
+	        
+	        //2nd question given array has a number both +ve and -ve expect one find it
+	        int[] arr2 = {-2,1,-3,3,-1,2,-4,5,-5};
+	        System.out.println(ans2(arr2));
+	        
+	        int [] arr3 = {-1,2,-2,1,4,5,-5};
+	        System.out.println(ans2(arr3));
 	    }
 
 }
