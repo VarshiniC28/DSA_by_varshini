@@ -17,7 +17,7 @@ public class PowerOf2OrNot {
 		}
 		
 		if(bitCount==1) System.out.println("Given number is power of 2");
-		else System.out.println("Number is not a power of 2");
+		else System.out.println("Number is not  a power of 2");
 		
 		
 		
@@ -25,7 +25,7 @@ public class PowerOf2OrNot {
 		
 		
 		//Another simple method is :
-		int m = 10;
+		int m = 10 ;
 		if((m & (m-1)) == 0) System.out.println("Given number is power of 2");
 		else System.out.println("Given number is not power of 2");
 	}
