@@ -1,7 +1,5 @@
 package maths.dsa2;
 
-import java.util.Iterator;
-
 //Print sll primes till n
 
 public class SieveOfEratosthenes {
