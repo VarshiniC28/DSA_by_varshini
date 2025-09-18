@@ -1,6 +1,6 @@
 package maths.dsa2;
 
-public class SqrtOfNumber {
+public class BinarySeacrhSqrtOfNumber {
 	
 	static double sqrt(int n, int p) { //p - precision
 		int s = 1;
@@ -35,6 +35,8 @@ public class SqrtOfNumber {
 	public static void main(String[] args) {
 		
 		System.out.println(sqrt(40, 3));
+		
+		//Time complexity : O(log(n))
 	}
 
 }
