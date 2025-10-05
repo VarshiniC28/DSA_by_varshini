@@ -66,7 +66,7 @@ public class MergeSorting {
 		//Time complexity: O(N*log(N))
 		//At every level, N elements are being merged
 		
-		//Space complexity:  
+		//Space complexity:  Auxillary space : O(n)
 		
 		int[] arr = {8,3,4,12,5,6};
 		arr = mergeSort(arr);
