@@ -56,7 +56,7 @@ public class MergeSortInPlace {
 
 	public static void main(String[] args) {
 
-		int[] arr = {5,4,3,2,1};
+		int[] arr = {5,4,3,2,1,6};
 		mergeSortInPlace(arr, 0, arr.length); //here end is not arr.length - 1 because s is inclusive and e is considered as exclusive. (Eg, everywhere we use <e, not <=e
 		System.out.println(Arrays.toString(arr));
 	}
