@@ -34,7 +34,7 @@ public class QuickSorting {
 			}
 		}
 		
-		//now my pivot is current index, now sort the 2 halves they are (low, end) and (start, high)
+		//now my pivot is in correct index, now sort the 2 halves they are (low, end) and (start, high)
 		
 		sort(arr, low, e);
 		sort(arr, s, high);
