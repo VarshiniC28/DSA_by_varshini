@@ -3,9 +3,9 @@ package recursion.part6.problems;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NumberOfDiceRollsWithTargetSum {
+public class OneDiceRollToTargetSum {
 	
-	//what all combinations in dice can give us our target sum
+	//what all combinations in one dice can give us our target sum - Only one dice considered here
 	static void dice(String p, int target){
 		if(target == 0) {
 			System.out.println(p);
