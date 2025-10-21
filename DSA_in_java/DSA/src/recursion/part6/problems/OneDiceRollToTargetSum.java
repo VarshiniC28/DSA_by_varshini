@@ -39,6 +39,8 @@ public class OneDiceRollToTargetSum {
 		dice("", 4);
 		
 		System.out.println(dice1("", 4, 8));
+		
+		
 	}
 
 }

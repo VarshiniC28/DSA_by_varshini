@@ -12,7 +12,7 @@ import java.util.Scanner;
       - Multiples of both 3 and 5 with "FizzBuzz"
     The program should then print the sequence as an array.
 
-    Example:
+    Example:c
     Input: 5
     Output: [1, 2, Fizz, 4, Buzz]
 
