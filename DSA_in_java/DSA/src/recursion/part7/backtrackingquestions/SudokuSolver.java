@@ -110,6 +110,9 @@ public class SudokuSolver {
 		  if(solve(board)) {
 			  display(board);
 		  }
+		  
+		  
+		  ///for char board refer next file
 	}
 
 }
