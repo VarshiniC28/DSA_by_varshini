@@ -54,6 +54,7 @@ public class SearchInRotatedSortedArrWithDuplicateElements {
 				start++;
 				
 				//check if end is pivot
+				
 				if(nums[end]<nums[end-1]) return end-1;
 				end--;
 			}

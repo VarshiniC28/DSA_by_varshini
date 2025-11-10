@@ -6,6 +6,8 @@ public class ClassObject {
 
 		//Class is the blueprint of object.
 		//Object is the instance of class
+		
 	}
 
 }
+	

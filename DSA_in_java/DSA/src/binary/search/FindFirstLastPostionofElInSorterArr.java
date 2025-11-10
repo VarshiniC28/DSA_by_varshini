@@ -41,6 +41,6 @@ public class FindFirstLastPostionofElInSorterArr { //facebook question
 	public static void main(String[] args) {
 		
 		int[] arr = {6,6,6,7,7,8,8,8,10};
-		System.out.println(Arrays.toString(Range(arr,10)));
+		System.out.println(Arrays.toString(Range(arr,6)));
 	}
 }

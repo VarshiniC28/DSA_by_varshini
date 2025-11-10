@@ -32,7 +32,7 @@ public class CeilningProblem {
 	public static void main(String[] args) {
 
 		int[] arr = {2,4,6,8,14,16,18};
-		System.out.println(ceiling(arr,19));
+		System.out.println(ceiling(arr,15));
 	}
 
 }
