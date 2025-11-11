@@ -61,6 +61,7 @@ public class SudokuSolver2 {
                 return false;
             }
         }
+        
 
         // Check 3×3 subgrid
         int sqrt = (int) Math.sqrt(board.length);
