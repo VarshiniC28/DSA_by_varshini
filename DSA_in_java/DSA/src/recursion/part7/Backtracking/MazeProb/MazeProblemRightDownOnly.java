@@ -15,6 +15,7 @@ public class MazeProblemRightDownOnly {
 			return 1;
 		}
 		
+		
 		//recursion - down right + (recursion) , or - right down + (recursion)
 		int left = maze(r - 1, c); //moving down
 		int right = maze(r, c - 1); //moving right
