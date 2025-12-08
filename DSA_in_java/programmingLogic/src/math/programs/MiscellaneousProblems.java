@@ -147,6 +147,10 @@ public class MiscellaneousProblems {
     }
     
 	public static void main(String[] args) {
-		distanceBetweenPoints();
+//		distanceBetweenPoints();
+		
+		//count of digits formula
+		System.out.println((int)Math.log10(15333) + 1);
+		
 	}
 }

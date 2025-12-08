@@ -14,7 +14,7 @@ public class NumsWithEvenNoOfDigits {
 		}
 		return countOfEvenNums;
 	}
-	
+	 
 //	static int countDigits(int num) {
 //		int count = 0;
 //		

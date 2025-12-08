@@ -27,6 +27,6 @@ public class SmallestLetterGreaterthanTarget {
 		
 		System.out.println("Program started");
 		char[] arr = {'c','i','j'};
-		System.out.println(nextGreatestLetter(arr,'j'));
+		System.out.println(nextGreatestLetter(arr,'c'));
 	}
 }

@@ -93,10 +93,10 @@ public class NumberBasedPrograms {
 //		printFactors();
 //		sumProductLargestUntilZero();
 //		factorial();
-//		perfectNumber();
+		perfectNumber();
 		
 //		AvgNumber();
-		permutation();
+//		permutation();
 	}
 
 }
