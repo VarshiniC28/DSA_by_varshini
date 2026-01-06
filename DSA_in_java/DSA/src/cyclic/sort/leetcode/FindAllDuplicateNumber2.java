@@ -46,5 +46,4 @@ public class FindAllDuplicateNumber2 {
 //		int[] arr = {1,1};
 		System.out.println(DuplicateNum(arr));
 	}
-
-}
+  }

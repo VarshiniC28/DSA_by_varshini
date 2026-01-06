@@ -15,7 +15,7 @@ public class SearchInRotatedSortedArrWithDuplicateElements {
 		if(target>=nums[0]) return binarySearch(nums,target,0,pivot-1);
 //		if(target<nums[0]) return binarySearch(nums, target,pivot+1,nums.length);
 		
-		return binarySearch(nums, target,pivot+1,nums.length);
+		return binarySearch(nums, target,pivot+1,nums.length-1);
 //		return -1;
 	}
 	

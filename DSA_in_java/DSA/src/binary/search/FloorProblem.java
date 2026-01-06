@@ -32,7 +32,7 @@ public class FloorProblem {
 	public static void main(String[] args) {
 
 		int[] arr = {2,4,6,8,14,16,18};
-		System.out.println(floor(arr,0));
+		System.out.println(floor(arr,2));
 	}
 
 }

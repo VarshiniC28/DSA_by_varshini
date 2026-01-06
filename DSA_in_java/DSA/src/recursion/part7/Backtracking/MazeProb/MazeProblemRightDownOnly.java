@@ -30,13 +30,9 @@ public class MazeProblemRightDownOnly {
 			return;
 		}
 		
-		if(r > 1) {
-			mazePath(p + 'D', r - 1, c);
-		}
+		if(r > 1) mazePath(p + 'D', r-1, c);
 		
-		if(c > 1) {
-			mazePath(p + 'R', r, c-1);
-		}
+		if(c > 1) mazePath(p + 'R', r, c-1);
 	}
 	
 	
@@ -44,20 +40,15 @@ public class MazeProblemRightDownOnly {
 	//Now returning the list of all possible ways
 	static ArrayList<String> pathRet(String p, int r, int c){
 		if(r == 1 && c == 1) {
-			ArrayList<String> li = new ArrayList<>();
+			ArrayList<String> li = new ArrayList<String>();
 			li.add(p);
 			return li;
 		}
 		
-		ArrayList<String> list = new ArrayList<>();
+		ArrayList<String> list = new ArrayList<String>();
 		
-		if( r > 1) {
-			list.addAll(pathRet(p + 'D', r - 1, c));
-		}
-		
-		if(c > 1) {
-			list.addAll(pathRet(p + 'R', r, c - 1));
-		}
+		if(r > 1) list.addAll(pathRet(p + 'D', r-1, c));
+		if(c > 1) list.addAll(pathRet(p + 'R', r, c-1));
 		
 		return list;
 	}

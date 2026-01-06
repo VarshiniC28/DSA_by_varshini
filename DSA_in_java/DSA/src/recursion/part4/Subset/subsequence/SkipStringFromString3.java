@@ -5,7 +5,7 @@ public class SkipStringFromString3 {
 	//Skip "apple" string from the given string
 	static String skipApple(String up) {
 		if(up.isEmpty()) {
-			return "";
+			return ""; 
 		}
 		
 		if(up.startsWith("apple")) {

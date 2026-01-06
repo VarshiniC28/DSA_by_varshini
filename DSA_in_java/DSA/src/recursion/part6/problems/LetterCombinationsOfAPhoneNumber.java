@@ -34,14 +34,14 @@ public class LetterCombinationsOfAPhoneNumber {
 		
 		int digit = up.charAt(0) - '0';
 		
-		ArrayList<String> ans = new ArrayList<>();
+		ArrayList<String> li = new ArrayList<String>();
 		
-		for (int i = ((digit - 1) * 3)-3; i < (digit * 3)-3; i++) { //range from inclusive - [(digit -1) * 3, digit * 3) - exclusive
-			char ch = (char) ('a' + i);
-			ans.addAll(pad(p + ch, up.substring(1)));
+		for(int i = ((digit - 1) * 3)-3; i < (digit * 3)-3; i++) {
+			char ch = (char)('a'+i);
+			li.addAll(pad(p+ch, up.substring(1)));
 		}
 		
-		return ans;
+		return li;
 	}
 
 	//-----------------=============================--------------------------------
@@ -84,6 +84,31 @@ public class LetterCombinationsOfAPhoneNumber {
 		return count;
 	}
 	
+	//using backtracking is fast; here is the code
+	static ArrayList<String> backtrack(int index, StringBuilder path, String digits, ArrayList<String> list){
+		
+		if(digits == null || digits.length() == 0) {
+			return list;
+		}
+		
+		String[] map = {"abc",  "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+		
+		if(index == digits.length()) {
+			list.add(path.toString());
+			return list;
+		}
+		
+		String letters = map[digits.charAt(index) - '2'];
+		
+		for(char ch: letters.toCharArray()) {
+			path.append(ch);
+			backtrack(index+1, path, digits, list);
+			path.deleteCharAt(path.length()-1);
+		}
+		
+		return list;
+	}
+	
 	public static void main(String[] args) {
 
 //		System.out.println(pad("", "78")); //this is wrong for 7 8 9
@@ -96,6 +121,10 @@ public class LetterCombinationsOfAPhoneNumber {
 		System.out.println(letterComb("","23"));
 		System.out.println(letterComb("","23").size());
 		System.out.println(combCount("", "23"));
+		
+		
+		ArrayList<String> list = new ArrayList<String>();
+		System.out.println(backtrack(0, new StringBuilder(), "79", list));
 	}
 
 }

@@ -24,7 +24,7 @@ public class MergeSortInPlace {
 		int j = m;
 		int k = 0;
 		
-		while(i < m && j < e) {
+		while(i < m && j < e) {	
 			if(arr[i] < arr[j]) {
 				merged[k] = arr[i];
 				i++;

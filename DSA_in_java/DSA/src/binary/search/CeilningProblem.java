@@ -11,12 +11,13 @@ public class CeilningProblem {
 		int start =  0;
 		int end = arr.length-1;
 		
+		
+		if(target>arr[arr.length-1]) { //target is greatest than the greatest element in the array return -1;
+			return -1;
+		}
+		
 		while(start<=end) {
 			int mid = start+(end-start)/2;
-			
-			if(target>arr[arr.length-1]) { //target is greatest than the greatest element in the array return -1;
-				return -1;
-			}
 			
 			if(target>arr[mid]) {
 				start=mid+1;
@@ -32,7 +33,7 @@ public class CeilningProblem {
 	public static void main(String[] args) {
 
 		int[] arr = {2,4,6,8,14,16,18};
-		System.out.println(ceiling(arr,15));
+		System.out.println(ceiling(arr,16));
 	}
 
 }

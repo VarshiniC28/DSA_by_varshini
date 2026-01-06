@@ -14,7 +14,7 @@ public class FibonacciNumber {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(fibonacci(50)); //if we give 50 or larger than those  numbers, no answer because this linear recursion is not efficient since some part of recursion trees repeat , that where we should use dynamic programming which we will learn later.
+		System.out.println(fibonacci(4)); //if we give 50 or larger than those  numbers, no answer because this linear recursion is not efficient since some part of recursion trees repeat , that where we should use dynamic programming which we will learn later.
 		//i.e if in recursion calls two or more recursion calls are doing same work, then we dont need to compute - Dynamic programming
 	}
 }

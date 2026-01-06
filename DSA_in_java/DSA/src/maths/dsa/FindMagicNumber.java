@@ -1,4 +1,4 @@
-package maths.dsa;
+ package maths.dsa;
 
 //Find the nth magic number (Amazon)
 /*

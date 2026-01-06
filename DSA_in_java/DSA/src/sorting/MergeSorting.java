@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class MergeSorting { 
 	
 		//In this we create new array objects at each step
-	
-		//instead we can also do in place with no new arrays //Will do in next 
+		//instead we can also do in place with no new arrays 
+		//Will do in next 
 		
 		//dividing array
 		static int[] mergeSort(int[] arr) {
 			
 			//Base condition
 			if(arr.length == 1) return arr;
-			
+			 
 			int mid = arr.length / 2;
 			
 			int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
