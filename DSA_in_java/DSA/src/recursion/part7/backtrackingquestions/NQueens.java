@@ -15,8 +15,6 @@ public class NQueens {
 			return 1;
 		}
 		
-		
-		
 		int count = 0;
 		
 		//in each row check every column if its safe, if its safe i.e true then place Q i.e make it true
